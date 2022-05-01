@@ -8,9 +8,9 @@ node ('docker'){
     checkout scm
 
     sh """
-        docker build -t iljailz/flaskex .
+        docker build -t iljailz/flaskex2 .
     """
-
+    }
     stage ("Push image"){
         sh """
         docker login -u $DOCKER_PASSWORD -p $DOCKER_PASSWORD
