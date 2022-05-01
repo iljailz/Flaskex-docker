@@ -4,6 +4,6 @@ node ('docker'){
 
     sh """
         docker build -t iljailz/flaskex .
-    """"
+    """
     }
 }
