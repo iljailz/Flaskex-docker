@@ -22,6 +22,6 @@ node ('docker'){
         docker login -u $DOCKER_PASSWORD -p $DOCKER_PASSWORD
         docker push $DOCKER_USERNAME/flaskex:${tag} 
         """
-
+    }
     }
     }
