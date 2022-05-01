@@ -13,7 +13,7 @@ node ('docker'){
     }
     stage ("Push image"){
         sh """
-        docker login -u $DOCKER_PASSWORD -p $DOCKER_PASSWORD
+        docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker push iljailz/flaskex2
         """
 
