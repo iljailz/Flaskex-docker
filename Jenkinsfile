@@ -14,13 +14,14 @@ node ('docker'){
     checkout scm
 
     sh """
-        docker build -t $DOCKER_USERNAME/flaskex:${tag} .
+        docker build -t $DOCKER_USERNAME/flaskex3:${tag} .
     """
+    }
 
     stage ("Push image"){
         sh """
         docker login -u $DOCKER_PASSWORD -p $DOCKER_PASSWORD
-        docker push $DOCKER_USERNAME/flaskex:${tag} 
+        docker push $DOCKER_USERNAME/flaskex3:${tag} 
         """
     }
     }
